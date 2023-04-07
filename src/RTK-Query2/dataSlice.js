@@ -183,7 +183,7 @@ export const { useGetDatasQuery, useGetDataQuery, useAddDataMutation, useUpdateD
 //* https://redux-toolkit.js.org/rtk-query/usage/usage-without-react-hooks#removing-a-subscription
 // dispatch the query instantly
 // Adding a cache subscription
-// const result = store.dispatch(api.endpoints.getPosts.initiate())
+//* const result = store.dispatch(api.endpoints.getPosts.initiate())
 
 // Removing the corresponding cache subscription
 // result.unsubscribe()
@@ -192,5 +192,21 @@ export const { useGetDatasQuery, useGetDataQuery, useAddDataMutation, useUpdateD
 //* https://redux-toolkit.js.org/rtk-query/api/setupListeners
 // setupListeners(store.dispatch);
 // dispatch(api.internalActions.onFocus())
+
+
+//* https://redux-toolkit.js.org/usage/usage-with-typescript#generated-action-types-for-slices
+// const slice = createSlice({
+//   name: 'test',
+//   initialState: 0,
+//   reducers: {
+//     increment: (state, action: PayloadAction<number>) => state + action.payload,
+//   },
+// })
+
+// function myCustomMiddleware(action: Action) {
+//!   if (slice.actions.increment.match(action)) {
+//     `action` is narrowed down to the type `PayloadAction<number>` here.
+//   }
+// }
 
 
